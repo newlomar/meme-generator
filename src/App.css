@@ -1,0 +1,16 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+}
+
+.header__ul {
+  display: flex;
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+  margin: 0;
+}
