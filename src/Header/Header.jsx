@@ -1,7 +1,7 @@
 export default function Header() {
   return (
-    <header>
-      <ul>
+    <header className='header'>
+      <ul className='header__ul'>
         <li>
           <img src='meme-logo' alt='troll face meme' />
           <h1>Meme Generator</h1>
