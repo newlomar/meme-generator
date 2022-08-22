@@ -1,9 +1,11 @@
+import logo from '../assets/troll_face.png';
+
 export default function Header() {
   return (
     <header className='header'>
       <ul className='header__ul'>
         <li>
-          <img src='meme-logo' alt='troll face meme' />
+          <img className='logo' src={logo} alt='troll face meme' />
           <h1>Meme Generator</h1>
         </li>
         <li>
