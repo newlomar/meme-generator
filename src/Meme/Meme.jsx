@@ -5,7 +5,7 @@ export default function Meme() {
         <input type='text' />
         <input type='text' />
       </section>
-      <button type='submit'></button>
+      <button type='submit'>Get new meme image</button>
     </form>
   );
 }
