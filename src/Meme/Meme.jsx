@@ -1,7 +1,7 @@
 export default function Meme() {
   return (
     <main className='main'>
-      <form>
+      <div>
         <section className='main__inputs'>
           <input className='input' type='text' placeholder='Top text' />
           <input className='input' type='text' placeholder='Bottom text' />
@@ -9,7 +9,7 @@ export default function Meme() {
         <button className='button' type='submit'>
           Get new meme image
         </button>
-      </form>
+      </div>
     </main>
   );
 }
