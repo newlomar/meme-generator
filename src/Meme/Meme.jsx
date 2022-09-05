@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import response from '../memesdata.js';
 
 export default function Meme() {
+  const [memeImage, setMemeImage] = useState('');
+
   function getRandomInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
@@ -8,7 +11,7 @@ export default function Meme() {
   function getRandomMemeUrl() {
     const index = getRandomInteger(0, 99);
     const url = response.data.memes[index].url;
-    console.log(url);
+    setMemeImage(url);
   }
 
   return (
@@ -22,6 +25,7 @@ export default function Meme() {
           Get new meme image
         </button>
       </div>
+      <img src={memeImage} alt='' />
     </main>
   );
 }
