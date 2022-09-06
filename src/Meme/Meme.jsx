@@ -25,7 +25,9 @@ export default function Meme() {
           Get new meme image
         </button>
       </div>
-      <img src={memeImage} alt='' />
+      <div className='main__image'>
+        <img src={memeImage} alt='' />
+      </div>
     </main>
   );
 }
