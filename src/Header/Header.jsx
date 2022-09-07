@@ -8,7 +8,7 @@ export default function Header() {
         <h1 className='h1'>Meme Generator</h1>
       </div>
       <div>
-        <h3 className='h3'>React Course | Development Knowledge Improvement</h3>
+        <h3 className='h3'>React Course - Development Knowledge Improvement</h3>
       </div>
     </header>
   );
