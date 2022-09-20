@@ -2,7 +2,7 @@ import { useState } from 'react';
 import response from '../memesdata.js';
 
 export default function Meme() {
-  const [memeImage, setMemeImage] = useState('');
+  const [memeImage, setMemeImage] = useState('http://i.imgflip.com/1bij.jpg');
 
   function getRandomInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
