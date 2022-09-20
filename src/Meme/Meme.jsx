@@ -2,7 +2,13 @@ import { useState } from 'react';
 import response from '../memesdata.js';
 
 export default function Meme() {
-  const [memeImage, setMemeImage] = useState('http://i.imgflip.com/1bij.jpg');
+  const [meme, setMeme] = useState({
+    topText: '',
+    bottomText: '',
+    randomImage: 'http://i.imgflip.com/1bij.jpg',
+  });
+
+  const [allMemeImages, setAllMemeImages] = useState(response.data.memes);
 
   function getRandomInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -11,7 +17,12 @@ export default function Meme() {
   function getRandomMemeUrl() {
     const index = getRandomInteger(0, 99);
     const url = response.data.memes[index].url;
-    setMemeImage(url);
+    setMeme((prevState) => {
+      return {
+        ...prevState,
+        randomImage: url,
+      };
+    });
   }
 
   return (
@@ -26,7 +37,7 @@ export default function Meme() {
         </button>
       </div>
       <div className='main__image'>
-        <img src={memeImage} alt='' />
+        <img src={meme.randomImage} alt='' />
       </div>
     </main>
   );
